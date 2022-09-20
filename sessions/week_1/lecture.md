@@ -8,7 +8,7 @@ This week, you should ensure you are up-to-speed with the module. Please watch t
 
 ### Course introduction
 
-<iframe src="https://solent.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=b24d3cb3-7fbb-4988-8f8c-adb000c013cf&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe src="https://solent.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=b8bcb8b6-eda3-458c-9841-af1600bcce80&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 ### Assessment introduction
 
@@ -22,4 +22,5 @@ We will not be delivering over teams this year; however, it's a good communicati
 
 ![](./../joining_a_team.png)
 
-Open teams and select “Teams” from the sidebar. Next, click join or create a team and enter this join code (elgpw9q). You are now a member of our module team.
+Open teams and select “Teams” from the sidebar. Next, click join or create a team and enter this join code (
+1fkaq4u). You are now a member of our module team.

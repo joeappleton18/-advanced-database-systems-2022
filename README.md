@@ -9,6 +9,16 @@ Along the way, we will be exploring the following technologies:
 - [ExpressJS](https://expressjs.com/)
 - [Embedded JavaScript templating](https://ejs.co/#promo)
 
+## Course Team's Page
+
+1. **Joining your team**
+
+![](joining_a_team.png)
+
+Open teams and select “Teams” from the sidebar. Next, click join or create a team and enter this join code (
+1fkaq4u). You are now a member of our module team.
+
+
 ## Weekly Session Schedule
 
 |     |                                                |
