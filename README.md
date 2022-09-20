@@ -28,4 +28,4 @@ Along the way, we will be exploring the following technologies:
 
 ## Notes
 
-[The current version of the notes can be found here.](https://joeappleton18.github.io/advanced-database-systems-2021/)
+[The current version of the notes can be found here.](https://joeappleton18.github.io/advanced-database-systems-2022/)
