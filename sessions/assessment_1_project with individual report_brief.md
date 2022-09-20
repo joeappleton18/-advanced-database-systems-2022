@@ -1,4 +1,4 @@
-## Assessment 1: Project with Report (Due: Friday, 14th January 2022)
+## Assessment 1: Project with Report (Due: Friday, 20th January 2023)
 
 ### Coursework Assessment Brief
 
@@ -17,7 +17,7 @@
 | Individual/Group:                                 | Individual                                                                                                                                                   |
 | Assessment Weighting:                             | 100%                                                                                                                                                         |
 | Issue Date:                                       | October                                                                                                                                                      |
-| Hand In Date:                                     | 4pm, Friday, 14th January 2022                                                                                                                               |
+| Hand In Date:                                     | 4pm, Friday, 20th January 2023                                                                                  |
 | Mode of Submission:                               | On the course SOL page                                                                                                                                       |
 | Number of copies to be submitted:                 | 1                                                                                                                                                            |
 
