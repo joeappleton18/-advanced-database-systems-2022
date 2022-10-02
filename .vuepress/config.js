@@ -27,11 +27,11 @@ module.exports = {
         children: ["sessions/week_1/lecture", "/sessions/week_1/"],
       },
 
-      // {
-      //   title: "Week 2 - Exploring Node, Express and Templates",
-      //   collapsable: true,
-      //   children: ["sessions/week_2/lecture", "/sessions/week_2/"],
-      // },
+      {
+        title: "Week 2 - Exploring Node, Express and Templates",
+        collapsable: true,
+        children: ["sessions/week_2/lecture", "/sessions/week_2/"],
+      },
       // {
       //   title: "Week 3 - No Sql data planning and Modelling",
       //   collapsable: true,
