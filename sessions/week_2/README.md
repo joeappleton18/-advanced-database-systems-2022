@@ -159,7 +159,7 @@ Using EJS, we now have some dynamic capabilities within our HTML views. The firs
 
 We've reached the main task for this week. Over the next several weeks we are going to be making a wine tasting application. It contains 130k tastings; however, interestingly there are only around 25 wine tasters!
 
-Your main task for this week is to further explore the dataset and mock up a 4 page website using ejs templates that could be used to present the wine data in a meaningful way. **Note**, at this point we are not processing any data. Rather, we are mocking up what the data could look like. [You can use my example site as a starting point](https://ssu-my.sharepoint.com/:u:/g/personal/joe_appleton_solent_ac_uk/EZL8OjP32PlArSd4JWv2bNQBYZh9uaV1wbGABTGn3rjrQQ?e=afqOKI). Notice how I am using Twitter Bootstrap to quickly generate a site. This is something you are more than welcome to do for your assessment. [You can read more about Bootstrap on the official site](https://getbootstrap.com/).
+Your main task for this week is to further explore the dataset and mock up a 4 page website using ejs templates that could be used to present the wine data in a meaningful way. **Note**, at this point we are not processing any data. Rather, we are mocking up what the data could look like. [You can use my example site as a starting point](https://ssu-my.sharepoint.com/:u:/g/personal/joe_appleton_solent_ac_uk/EZL8OjP32PlArSd4JWv2bNQBYZh9uaV1wbGABTGn3rjrQQ?e=ChFrr3). Notice how I am using Twitter Bootstrap to quickly generate a site. This is something you are more than welcome to do for your assessment. [You can read more about Bootstrap on the official site](https://getbootstrap.com/).
 
 To begin with you can start to break your application down as below:
 
