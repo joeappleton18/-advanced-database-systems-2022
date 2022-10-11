@@ -38,7 +38,7 @@ For the rest of this unit, I will be providing you with a sample application whi
 
 - [Check the README.md instructions on the starter project to get started. This will tell you how to set everything up this week](https://github.com/joeappleton18/db-starter-project).
 
-- You'll notice you will need to seed the database and rename the ".env.example" file to ".env". Further to this, you will also need to run the database seeder.
+- You'll notice, in the `README.md` instructions, you will need to seed the database and rename the ".env.example" file to ".env". Further to this, you will also need to run the database seeder.
 
 - You should take a look at the seeder.js file and ensure you have an idea how it works. Using a small side utility to seed a database is common.
 
@@ -71,7 +71,13 @@ Currently each document in our "tastings" collection looks, along the lines of, 
 
 To get you all started, let's explore some basic read operations that we might want to run on our collection.
 
-Access the MongoDB command line, and run the following:
+Access on of the following: 
+
+- The MongoDB command line (for your home computer)
+- A MongoDB for VSCode Playground (recommend for university computers)
+
+
+Run the following:
 
 ```js
 use wine
