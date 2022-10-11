@@ -34,7 +34,7 @@ The above command is fairly self explanatory; however, it is worth noting, if th
 
 ## Task 1 - Setting Up our Sample Application
 
-For the rest of this unit, I will be providing you with a sample application which builds on our wine tasting dataset. I intend to ensure you are all starting with the same code base and will provide you with an up-to-date version the application each week. To get started this week:
+For the rest of this unit, I will be providing you with a sample application which builds on our wine tasting dataset. I intend to ensure you are all starting with the same code base and will provide you with an up-to-date version the application each week. To get started this week: `git clone  https://github.com/joeappleton18/db-starter-project`
 
 - [Check the README.md instructions on the starter project to get started. This will tell you how to set everything up this week](https://github.com/joeappleton18/db-starter-project).
 
@@ -74,7 +74,9 @@ To get you all started, let's explore some basic read operations that we might w
 Access on of the following: 
 
 - The MongoDB command line (for your home computer)
+- The query runner that is in your starter project (`query-runner.js `)
 - A MongoDB for VSCode Playground (recommend for university computers)
+  
 
 
 Run the following:
