@@ -18,6 +18,8 @@ If you are using windows, now is a good time to add the MongoDB folder as an env
 - You will need to download [MongoDB Tools](https://www.mongodb.com/try/download/database-tools)
 - Extract the zip file and move the contents to `C:\Program Files\MongoDB\Server\4.4\bin\`
 
+- [If this does not work, please refer to the MongoDB documentation](https://cloud.mongodb.com/v2/61532143efc0cc664129e20f#clusters/commandLineTools/Cluster0)
+
 <!-- ## Importing Data
 
 When it comes to importing data we have a few options here.

@@ -37,11 +37,11 @@ module.exports = {
         collapsable: true,
         children: ["sessions/week_3/lecture", "/sessions/week_3/"],
       },
-      // {
-      //   title: "Week 4  - Completing the MVC stack",
-      //   collapsable: true,
-      //   children: ["/sessions/week_4/lecture", "/sessions/week_4/"],
-      // },
+      {
+        title: "Week 4  - Completing the MVC stack",
+        collapsable: true,
+        children: ["/sessions/week_4/lecture", "/sessions/week_4/"],
+      },
 
       // {
       //   title: "Week 5 - Getting to Grips With the Assessment",
