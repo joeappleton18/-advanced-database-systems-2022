@@ -75,13 +75,20 @@ It is most convenient to configure a local development environment. This process
 
 **Windows Installation**
 
-- You will need to download and run the msi package from the [Mongo Downloads Section](https://www.mongodb.com/try/download/community) - ensure that you download community edition.
+- You will need to download and run the msi package from the [Mongo Downloads Section](https://www.mongodb.com/try/download/community) - ensure that you download community edition and you have selected the latest. For example 6.0.2 (6.0) will be used but you may have to use something else.
+- you may also want to download [mongosh](https://www.mongodb.com/try/download/shell?jmp=docs) (mongo shell) as it does not come with the package you installed earlier.
 - You then need to proceed through each step of the wizard
   - Select complete installation
   - Ensure that you install MONGO as a network service
-- Assuming you did not change the defaults, create the directory 'C:\Program Files\MongoDB\Server\4.4\data\'
-- You can now start the server by clicking "C:\Program Files\MongoDB\Server\4.4\bin\mongod.exe"
-- Next, clicking "C:\Program Files\MongoDB\Server\4.4\bin\mongo.exe"" should bring up the shell
+- Assuming you did not change the defaults, create the directory 'C:\Program Files\MongoDB\Server\6.0\data\' if it does not exist
+- since MONGO was installed as a network service it'll be automatically started unless there was an error.
+-  You can turn the database on/off via the services app.  Locate 'MongoDB Server (MongoDB)' and start/stop the service if for some reason you need to.
+-  mongoDB compass and mongosh can be used to interact with the database.
+
+:::warning Add mongosh to PATH
+You should add C:\Program Files\mongosh as a PATH environment alongside your mongoDB files so you can run it anywhere see [here](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/) if unsure how to add it, if done right opening a new command prompt and typing mongosh should log you into the local database ready for you to do commands.
+:::
+
 
 **Setting up our Cloud Database (use this option to work from university)**
 
@@ -115,7 +122,7 @@ Here is hoping that went smoothly; if it did, we are now ready to proceed with o
 
 ## Task 1
 
-Follow the instructions above to set up your own development environment. Further to the above installation steps, you may also want to install [Robot 3T](https://robomongo.org/).
+Follow the instructions above to set up your own development environment. Further to the above installation steps, you may also want to install [Robot 3T](https://robomongo.org/) although mongoDB compass can be used.
 
 ## Sample Applications
 
