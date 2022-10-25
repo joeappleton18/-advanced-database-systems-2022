@@ -43,11 +43,11 @@ module.exports = {
         children: ["/sessions/week_4/lecture", "/sessions/week_4/"],
       },
 
-      // {
-      //   title: "Week 5 - Getting to Grips With the Assessment",
-      //   collapsable: true,
-      //   children: ["/sessions/week_5/"],
-      // },
+      {
+        title: "Week 5 - Getting to Grips With the Assessment",
+        collapsable: true,
+        children: ["/sessions/week_5/"],
+      },
 
       // {
       //   title: "Week 6 - Thinking About Updating Data",

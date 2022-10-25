@@ -10,7 +10,8 @@ To do this, we are going to form groups and decided on a example assessment idea
 
 This assessment requires you to create, test, and deploy a proof of concept data-driven full stack web-application. 
 
-The above statement suggests that we need to create a proof of concept data driven web application. 
+The above statement suggests that we need to create a proof of concept data driven web application.
+ 
 A proof of concept means this application does not need to be overly sophisticated. Rather, we are just trying to show that a proposed solution to a given problem is feasible. It is vital that this problem is clearly defined; otherwise, when I am marking your assessment I won't know to what extent your solution addresses the problem you set out to solve. 
 
 ## Introduction
