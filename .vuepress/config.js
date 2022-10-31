@@ -49,11 +49,11 @@ module.exports = {
         children: ["/sessions/week_5/"],
       },
 
-      // {
-      //   title: "Week 6 - Thinking About Updating Data",
-      //   collapsable: true,
-      //   children: ["/sessions/week_6_a/lecture", "/sessions/week_6_a/"],
-      // },
+      {
+        title: "Week 6 - Thinking About Updating Data",
+        collapsable: true,
+        children: ["/sessions/week_6_a/lecture", "/sessions/week_6_a/"],
+      },
 
       // {
       //   title: "Week 7 - Data Modeling and Relationships",
