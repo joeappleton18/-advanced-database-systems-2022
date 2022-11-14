@@ -181,7 +181,7 @@ db.tastings.aggregate([
 
 ## Task 1 - Constructing further collections
 
-- Within MongoDB's terminal runtime, or in a VS code playground. Use the aggregation techniques explored above to create a: varieties, countries, provinces , and regions collection. **Hint, make sure you are happy with the output before you use the $out step**. Use a name property to hold the value (e.g. county).
+- Within MongoDB's terminal runtime, or in a VS code playground, use the aggregation techniques explored above to create a: varieties, countries, provinces , and regions collection. **Hint, make sure you are happy with the output before you use the $out step**. Use a name property to hold the value (e.g. county).
 
 - When you are happy with the output, see if you can update `seeder.js` to include these aggregation steps. There is a slight difference in syntax in the `seeder.js` as we are using the node MongoDB package:
 
@@ -193,7 +193,7 @@ await db.collection("tastings").aggregate([
       { $out: "regions" }
     ]).toArray() 
 ```
->> An example of how to run set up a aggregation pipeline using the node driver. Notice how I've chained `toArray()` to the `aggregate` function. This is needed otherwise the aggregation does not resolve. [A painful few hours were spent finding this out](https://stackoverflow.com/questions/49835278/mongodb-node-js-out-with-aggregation-only-working-if-calling-toarray)
+>> An example of how  to set up a  aggregation pipeline using the node driver. Notice how I've chained `toArray()` to the `aggregate` function. This is needed otherwise the aggregation does not resolve. [A painful few hours were spent finding this out](https://stackoverflow.com/questions/49835278/mongodb-node-js-out-with-aggregation-only-working-if-calling-toarray)
 
 - Create models for each of the collections we created above. You may want to add some validation. Remember, we use the singular name of each collection to define our model:
 
