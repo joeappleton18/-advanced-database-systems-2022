@@ -60,11 +60,11 @@ module.exports = {
         collapsable: true,
         children: ["/sessions/week_7/lecture", "/sessions/week_7/"],
       },
-      // {
-      //   title: "Week 8 - User Authentication",
-      //   collapsable: true,
-      //   children: ["/sessions/week_8/lecture", "/sessions/week_8/"],
-      // },
+      {
+        title: "Week 8 - User Authentication",
+        collapsable: true,
+        children: ["/sessions/week_8/lecture", "/sessions/week_8/"],
+      },
 
       // {
       //   title: "Week 9 - Deploying to a Serverless Infrastructure",

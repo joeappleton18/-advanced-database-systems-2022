@@ -1,15 +1,14 @@
-**subject:** Advanced Database Systems - Week 8 (Introduction)
+**subject:** Advanced Database Systems - Week 7 (Introduction)
 
 Hello [:firstname:],
 
-Welcome to Week Eight.
+Welcome to Week Seven.
 
-This week we are going to consider how we can manage users in our wine tasting application. We ill frame this exploration through the following questions:
+This week promises to address, that perhaps nagging, question:
 
-#### How can I allow users to register and securely login to my wines database?
+How can we construct relationships when working with non-relational databases?
 
-- How can I manage users so they remain logged in between sessions?
-- How can I allow users to enter a password, while keeping this password hidden from my application?
+You'll learn, that non-relational does not mean no-relations, that would be very sad 😿. We'll also take the opportunity to look at some more advanced MongoDB queries. In doing so, we'll be able to dynamically populate the statistics on our wine tasting home page.
 
 All the best,
 
