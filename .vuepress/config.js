@@ -66,11 +66,11 @@ module.exports = {
         children: ["/sessions/week_8/lecture", "/sessions/week_8/"],
       },
 
-      // {
-      //   title: "Week 9 - Deploying to a Serverless Infrastructure",
-      //   collapsable: true,
-      //   children: ["/sessions/week_9/lecture", "/sessions/week_9/"],
-      // },
+      {
+        title: "Week 9 - Deploying to a Serverless Infrastructure",
+        collapsable: true,
+        children: ["/sessions/week_9/lecture", "/sessions/week_9/"],
+      },
 
       // {
       //   title: "Week 10 - Further Mongo Relations and Dynamic JavaScript",

@@ -41,11 +41,10 @@ Notice, in the above architectural digram, we have lambda functions (denoted by 
 
 ## Our Infrastructure
 
-<img src="https://joeappleton18.github.io/data-management-2021-notes/images/wine-infrastructure.png" />
+![](./deployment-diagram.png)
+> > The infrastructure we are setting up this week - utilising Cyclic  and MongoDB Atlas.
 
-> > The infrastructure we are setting up this week - utilising Heroku and MongoDB Atlas.
-
-Rather than use AWS directly, we are going to be utilising two services that simplify its infrastructure - [Heroku](https://devcenter.heroku.com/) and [MongoDB Atlas](https://www.mongodb.com/cloud/atlas/register). Heroku allows us to quickly deploy applications to a lightweight, secure, virtualized Unix container - known as a dyno. Heroku allows us to deploy applications by simply pushing our codebase to a dedicated remote branch: `git push heroku master`. While Heroku will take care of running our node application, we'll use MongoDB Atlas to host our database. MongoDB atlas if a service offered by MongoDB which simplifies the process of provisioning and deploying cloud instances of MongoDB.
+Rather than use AWS directly, we are going to be utilising two services that simplify its infrastructure - [Cyclic](cyclic.sh) and [MongoDB Atlas](https://www.mongodb.com/cloud/atlas/register). Cyclic allows us to quickly deploy applications to a lightweight, secure, virtualised Unix container. Cyclic allows us to deploy applications by simply pushing our codebase to a main or master branch on a GitHub repository. While Cyclic will take care of running our node application, we'll use MongoDB Atlas to host our database. MongoDB atlas if a service offered by MongoDB which simplifies the process of provisioning and deploying cloud instances of MongoDB.
 
 ## Practical Session
 
@@ -132,9 +131,9 @@ If you already have a Atlas DB account, you can start from the second step.
 - From your Atlas dash, click `clusters/collections`, and delete any existing databases that are in there. You may have one called `myFirstDatabase`, delete this.
 - Follow steps above to seed a production database.
 
-## Setting up a Heroku Dyno
+## Setting up a Cyclic Deployment 
 
-Now we have a database set up, we are ready to deploy our application to Heroku. This is actually a very painless process:
+Now we have a database set up, we are ready to deploy our application to Cyclic. This is actually a very painless process:
 
 ### Making our Application Deployable
 
@@ -142,19 +141,7 @@ To make our application deployable, we only need to make a few tweaks:
 
 - Ensure you are working on a master branch (see this weeks setup instruction, above)
 
-- Specify the version of node we want in our hosting environment (Currently, supported versions are 10.x, 12.x, 14.x, and 15.x.). I am not sure why they skipped 13. We can do this by adding a scripts engines property in our `package.json` file:
-
-```JavaScript
-...
-  "engines": {
-    "node": "14.x"
-  },
-...
-```
-
-> > package.json - add the engines property to your package.json object. 14 or 15 should be fine.
-
-- When our application is deployed, Heroku will look in our `package.json` file for a start script. It uses this script to run our app. Let's create a start command:
+- When our application is deployed, Cyclic will look in our `package.json` file for a start script. It uses this script to run our app. Let's create a start command:
 
 ```JavaScript
 ...
@@ -165,54 +152,64 @@ To make our application deployable, we only need to make a few tweaks:
 ...
 ```
 
-> > package.json - a start script instructing heroku how to run our application
+>> package.json - a start script instructing cyclic how to run our application
 
-- Finally, Heroku automatically binds our applications to port 80. In doing so it sets an environment variable called "PORT". You'll notice, however, that we have our port assigned to the environment variable "WEB_PORT". For simplicity, let's updated our application to use the environment variable "PORT".
 
-  - Updated your `.env` file `WEB_PORT` var to `PORT`
-  - Within `app.js`, search and replace `WEB_PORT` to `PORT`
+- Next we need a remote repository to host our wine application:
 
-:::note
-This section needs some installing, and we can't do this on the university computers. As such, you will need to do this at home.
-:::
+    - Create an empty GitHub repository and take note of the remote address (***note, it must be empty in order to work on the Cyclic free tier).
+    - Point a terminal session to the root of your wine-tasting application and push your application to your new remote repository.
+    - Ensure the changes to your work are committed
+
+```bash
+
+git checkout -b master     # ensure you are on a master branch 
+git remote remove origin   # removes the existing remote 
+git remote add origin <your repo address>  # set up a new remote 
+
+git push origin master 
+
+```
+>> run the above in the root directory of you wine tasting application
+
 
 ### Set Up
 
-- [Create a new Heroku account](https://signup.heroku.com/signup/dc)
-- [Download and install the Heroku CLI for your operating system](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
-- From within your project directory, in a terminal session run `heroku login`
-- Next, we need to create a new heroku application. From, within your project directory, in a terminal session run `heroku create`
-- If all has gone well, running `git remote -v` should reveal that a 'heroku' remote had been configured for you. We can use this remote to deploy, but first, we need set a environment variable. We only need need set an environment variable for `MONGODB_URI`, as `heroku` automatically sets the `PORT` for us. Also, if you check your heroku dash, you'll see that an application has been created for you.
-- To set an environment variable for our heroku project, we simply need to run `heroku config:set VAR_NAME=VAR_VALUE`. As discussed, you only need to set an environment variable for `MONGODB_URI`. This should be set to the URL connection that you used earlier in your seeder. Set it as follows, `heroku config:set MONGODB_URI="YOUR PRODUCTION DB STRING"`. You can also check, or set, this manually by looking in your `project settings -> Config Vars`. (**Note,** you need the quotation marks)
-- Within the VS code integrated terminal, type in `git branch` you may find you are on the branch `week-8-solutions`, we need to have a master branch that we are going to deploy. You can create one by making a commit (if you have file changes), and running `git checkout -b master`
-- We are now ready to deploy. First ensure you have committed the latest version of your work. Next, run `git push heroku master`. If all has gone well you should be able to access your application using the URL printed on your terminal output.
+- We are now ready to deploy our application to Cyclic
+
+0. [Set up a new Cyclic Account](https://cyclc.sh)
+
+1. [Go to Cyclic - Deploy New App](https://app.cyclic.sh/#/deploy?intro=true)
+
+
+2. Click on Link Your Own
+![Step 2 screenshot](https://images.tango.us/workflows/f30673c7-b697-484a-8c76-1ba657b2158a/steps/f8403484-68a9-4d23-9191-e0aa9d38132b/7b0a9fb0-0ba0-4eca-a61e-ee712ec7e772.png?crop=focalpoint&fit=crop&fp-x=0.2681&fp-y=0.3622&fp-z=2.5372&w=1200&mark-w=0.2&mark-pad=0&mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n&ar=1466%3A980)
+
+
+3. Click on Search your repositories and find your repository containing the room finder application
+![Step 3 screenshot](https://images.tango.us/workflows/f30673c7-b697-484a-8c76-1ba657b2158a/steps/c09dd3e0-1d8f-4ca7-b0c4-b69bba2504cb/fd0304c9-9bd0-40d1-98d4-0fef1fdff48b.png?crop=focalpoint&fit=crop&fp-x=0.4952&fp-y=0.5735&fp-z=1.1277&w=1200&mark-w=0.2&mark-pad=0&mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n&ar=1466%3A980)
+
+
+4. Your application is now live! Well, sort of: we still need to set up an DB environment. take note of your applications URL and click to go to your application's dash.
+![Step 4 screenshot](https://images.tango.us/workflows/f30673c7-b697-484a-8c76-1ba657b2158a/steps/2f086a4a-b08d-40bb-9568-dcde27436a66/9174fbe2-912e-4993-ba11-6ade689e4989.png?crop=focalpoint&fit=crop&fp-x=0.4792&fp-y=0.9464&fp-z=2.6235&w=1200&mark-w=0.2&mark-pad=0&mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n&ar=1466%3A980)
+
+
+5. Click on Variables
+![Step 5 screenshot](https://images.tango.us/workflows/f30673c7-b697-484a-8c76-1ba657b2158a/steps/ee55aa2a-d0c2-42c2-b6cd-d10c8ccf46b0/9c4bbb6c-3a96-4e07-8542-2fef4154db01.png?crop=focalpoint&fit=crop&fp-x=0.5341&fp-y=0.2276&fp-z=2.7259&w=1200&mark-w=0.2&mark-pad=0&mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n&ar=1466%3A980)
+
+
+6. Add the MONGODB_URI environment variable. The value should be your production database. Click Add Variable and Save, when done
+![Step 6 screenshot](https://images.tango.us/workflows/f30673c7-b697-484a-8c76-1ba657b2158a/steps/6f5069b5-f646-4477-b038-b33c95899d53/1a9c0b34-4a22-49d2-bb9a-278a01cb9bd2.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&fp-z=1.0000&w=1200&mark-w=0.2&mark-pad=0&mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n&ar=1466%3A980)
+
+
+
 
 ## Task 2 - Deploying your Web Application
 
-If you have a laptop, follow the steps above to deploy your wine tasting application to Heroku.
+Follow the steps above to deploy your wine tasting application to Cyclic.
 
-## Task 3 - Continuous Deployments
 
-![](./git-deploy.png)
 
->> Automatic deployment enabled. Every time I push to the master branch, my project deploys!
-
-Let's see if we can use a git hook to deploy our work. This means that whenever we push to our git repos master branch, our project deploys.
-
-![](./config-vars.png)
-
-> > You need to ensure you MONGODB_URI is set
-
-- If you are working from university, and have not installed the Heroku CLI:
-  - create a new application in your `https://dashboard.heroku.com/`.
-  - within `project settings -> Config Vars` set your MONGODB_URI to your production database
-- `git remote remove origin`
-- `git remote add origin <your git repo address>`
-- Push your code to GitHub, `git push origin master`
-- Within the VS code integrated terminal, type in `git branch` you may find you are on the branch `week-8-solutions`, we need to have a master branch that we are going to deploy. You can create one by making a commit (if you have file changes), and running `git checkout -b master`
-- Now, in your `https://dashboard.heroku.com/` , go to your `project --> deploy` and click `GitHub`.
-  - You'll then be able to connect your repository such that when you push to your projects master branch it deploys!
-
-## Task 4 - Set up a Project for Your Assessment
+## Task 3 - Set up a Project for Your Assessment
 
 Configure a new deployable project for your assessment
