@@ -198,9 +198,8 @@ git push origin master
 ![Step 5 screenshot](https://images.tango.us/workflows/f30673c7-b697-484a-8c76-1ba657b2158a/steps/ee55aa2a-d0c2-42c2-b6cd-d10c8ccf46b0/9c4bbb6c-3a96-4e07-8542-2fef4154db01.png?crop=focalpoint&fit=crop&fp-x=0.5341&fp-y=0.2276&fp-z=2.7259&w=1200&mark-w=0.2&mark-pad=0&mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n&ar=1466%3A980)
 
 
-6. Add the MONGODB_URI environment variable. The value should be your production database. Click Add Variable and Save, when done
+6. Add the MONGODB_URI environment variable. The value should be your production database's connection string. Click Add Variable and Save, when done
 ![Step 6 screenshot](https://images.tango.us/workflows/f30673c7-b697-484a-8c76-1ba657b2158a/steps/6f5069b5-f646-4477-b038-b33c95899d53/1a9c0b34-4a22-49d2-bb9a-278a01cb9bd2.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&fp-z=1.0000&w=1200&mark-w=0.2&mark-pad=0&mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n&ar=1466%3A980)
-
 
 
 
