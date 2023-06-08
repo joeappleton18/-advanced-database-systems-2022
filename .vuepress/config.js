@@ -11,7 +11,14 @@ module.exports = {
         title: "Assessment 1",
         collapsable: true,
         children: [
-          "/sessions/assessment_1_project with individual report_brief",
+          "/sessions/assessment_1_project_with_individual_report_brief",
+          "/sessions/assessment_support",
+        ],
+      }, {
+        title: "Assessment 1 (Referral/Deferral)",
+        collapsable: true,
+        children: [
+          "/sessions/assessment_1_project with individual report_brief_referral",
           "/sessions/assessment_support",
         ],
       },
